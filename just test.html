@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: wrap;
+            position: relative;
+            z-index: 1;
+            margin: 0 auto;
+            min-height: 87vh;
+            width: 87vw;
+            background-color: green;
+            justify-content: center;
+            align-items: center;
+            /* visibility: hidden; */
+        }
+
+
+        .ul-1 {
+            gap: 10px;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            list-style-type: none;
+            min-width: 80%;
+            align-self: center;
+        }
+
+        .ul-2 {
+            position: relative;
+            display: flex;
+            flex-basis: 500px;
+            width: 50vw;
+            height: auto;
+            list-style-type: none;
+            z-index: 20;
+            bottom: 50vh;
+            justify-content: center;
+            align-items: center;
+            /* bottom: 40vh; */
+
+        }
+
+        .li-big {
+            position: absolute;
+            border: 1px solid #000;
+            z-index: 20;
+            width: 100%;
+            height: auto;
+            justify-self: center;
+            align-self: center;
+
+        }
+
+        .li-big img {
+            width: 100%;
+            height: auto;
+            scale: 0;
+            /* visibility: hidden; */
+            transition: ease-in-out 5s;
+        }
+
+        ul::after {
+            content: "";
+            flex-basis: 350px;
+        }
+
+        .li-litle {
+            flex-basis: 350px;
+            height: 200px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="ul-1">
+            <li id="link1" class="li-litle">bara</li>
+            <li class="li-litle">bara1</li>
+            <li class="li-litle">bara</li>
+            <li class="li-litle">bara</li>
+            <li class="li-litle">bara</li>
+        </ul>
+        <ul class="ul-2">
+            <li id="pic1" class="li-big"><img src="car.jpg" alt=""></li>
+            <li class="li-big"><img src="car2.jpg" alt=""></li>
+            <li class="li-big"><img src="car.jpg" alt=""></li>
+            <li class="li-big"><img src="car.jpg" alt=""></li>
+            <li class="li-big"><img src="car.jpg" alt=""></li>
+        </ul>
+
+    </div>
+    <script>
+
+        // const myNodelist = document.querySelectorAll(".li-litle");
+        // for (let i = 0; i < myNodelist.length; i++) {
+        //     const element = myNodelist[i].style.backgroundColor = "skyblue";
+        // }
+        // const myNodelist = document.querySelectorAll(".li-big img");
+        // for (let i = 0; i < myNodelist.length; i++) {
+        //     const element = myNodelist[i].style.scale = "1";
+        // }
+
+
+
+        // ************Slider Images***************
+        const PIC1 = document.getElementById("pic1");
+
+
+        // ************Slider Links****************
+        const IMAGE_LINK1 = document.getElementById("link1");
+
+
+        const onChangePic = (picture) => {
+            PIC1.style.scale = "1";
+
+            if (picture === PIC1) return (PIC1.style.display = "block");
+
+        };
+
+        IMAGE_LINK1.addEventListener("click", () => onChangePic(PIC1));
+        IMAGE_LINK2.addEventListener("click", () => onChangePic(PIC2));
+        IMAGE_LINK3.addEventListener("click", () => onChangePic(PIC3));
+        IMAGE_LINK4.addEventListener("click", () => onChangePic(PIC4));
+        IMAGE_LINK5.addEventListener("click", () => onChangePic(PIC5));
+
+
+    </script>
+</body>
+
+</html>
