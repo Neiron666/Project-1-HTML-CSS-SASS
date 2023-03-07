@@ -43,33 +43,39 @@
             display: flex;
             flex-basis: 500px;
             width: 50vw;
-            height: auto;
+            height: fit-content;
             list-style-type: none;
             z-index: 20;
             bottom: 50vh;
             justify-content: center;
-            align-items: center;
-            /* bottom: 40vh; */
+            /* align-items: center; */
+            bottom: 70vh;
+            background-color: #fff;
 
         }
 
         .li-big {
             position: absolute;
-            border: 1px solid #000;
             z-index: 20;
             width: 100%;
-            height: auto;
-            justify-self: center;
-            align-self: center;
+            height: max-content;
+            /* justify-self: center; */
+            /* align-self: center; */
+            display: flex;
+            justify-content: last baseline;
 
         }
 
-        .li-big img {
+        .li-big .li-picture {
+            border: 3px solid #000;
             width: 100%;
             height: auto;
             scale: 0;
             /* visibility: hidden; */
-            transition: ease-in-out 5s;
+            transition: ease-in-out 0.3s;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
         }
 
         ul::after {
@@ -82,24 +88,48 @@
             height: 200px;
             background-color: gray;
         }
+
+        .close-img {
+            position: absolute;
+            z-index: 21;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background-color: #464646;
+            opacity: 0.5;
+            border-radius: 5px;
+            scale: 0;
+            transition: ease-in-out 1s;
+
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <ul class="ul-1">
-            <li id="link1" class="li-litle">bara</li>
-            <li class="li-litle">bara1</li>
+            <li id="link1" class="li-litle">link1</li>
+            <li id="link2" class="li-litle">link2</li>
             <li class="li-litle">bara</li>
             <li class="li-litle">bara</li>
             <li class="li-litle">bara</li>
         </ul>
         <ul class="ul-2">
-            <li id="pic1" class="li-big"><img src="car.jpg" alt=""></li>
-            <li class="li-big"><img src="car2.jpg" alt=""></li>
-            <li class="li-big"><img src="car.jpg" alt=""></li>
-            <li class="li-big"><img src="car.jpg" alt=""></li>
-            <li class="li-big"><img src="car.jpg" alt=""></li>
+            <div><img class="close-img" id="close-img1" src="closer-button.png" alt="closer"></div>
+            <li class="li-big"><img id="pic1" class="li-picture" src="car.jpg" alt="">
+            </li>
+            <li class="li-big"><img id="pic2" class="li-picture" src="car2.jpg" alt="">
+                <div><img class="close-img" id="close-img2" src="closer-button.png" alt="closer"></div>
+            </li>
+            <li class="li-big"><img id="pic3" class="li-picture" src="car.jpg" alt="">
+                <div><img class="close-img" src="closer-button.png" alt="closer"></div>
+            </li>
+            <li class="li-big"><img id="pic4" class="li-picture" src="car.jpg" alt="">
+                <div><img class="close-img" src="closer-button.png" alt="closer"></div>
+            </li>
+            <li class="li-big"><img id="pic5" class="li-picture" src="car.jpg" alt="">
+                <div><img class="close-img" src="closer-button.png" alt="closer"></div>
+            </li>
         </ul>
 
     </div>
@@ -118,24 +148,26 @@
 
         // ************Slider Images***************
         const PIC1 = document.getElementById("pic1");
+        const PIC2 = document.getElementById("pic2");
 
 
         // ************Slider Links****************
         const IMAGE_LINK1 = document.getElementById("link1");
+        const IMAGE_LINK2 = document.getElementById("link2");
 
 
         const onChangePic = (picture) => {
-            PIC1.style.scale = "1";
+            PIC1.style.scale = "0";
+            PIC2.style.scale = "0";
 
-            if (picture === PIC1) return (PIC1.style.display = "block");
+            if (picture === PIC1) return (PIC1.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
+            if (picture === PIC2) return (PIC2.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
 
         };
 
         IMAGE_LINK1.addEventListener("click", () => onChangePic(PIC1));
         IMAGE_LINK2.addEventListener("click", () => onChangePic(PIC2));
-        IMAGE_LINK3.addEventListener("click", () => onChangePic(PIC3));
-        IMAGE_LINK4.addEventListener("click", () => onChangePic(PIC4));
-        IMAGE_LINK5.addEventListener("click", () => onChangePic(PIC5));
+
 
 
     </script>
