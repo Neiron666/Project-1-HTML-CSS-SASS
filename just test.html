@@ -45,12 +45,10 @@
             width: 50vw;
             height: fit-content;
             list-style-type: none;
-            z-index: 20;
             bottom: 50vh;
             justify-content: center;
             /* align-items: center; */
             bottom: 70vh;
-            background-color: #fff;
 
         }
 
@@ -63,6 +61,7 @@
             /* align-self: center; */
             display: flex;
             justify-content: last baseline;
+            visibility: hidden;
 
         }
 
@@ -70,12 +69,12 @@
             border: 3px solid #000;
             width: 100%;
             height: auto;
-            scale: 0;
             /* visibility: hidden; */
-            transition: ease-in-out 0.3s;
-            cursor: pointer;
             position: relative;
-            z-index: 2;
+            scale: 0;
+            transition: ease-in-out 0.3s;
+
+
         }
 
         ul::after {
@@ -84,22 +83,26 @@
         }
 
         .li-litle {
+            position: relative;
+            /* z-index: 25; */
             flex-basis: 350px;
             height: 200px;
             background-color: gray;
+            cursor: pointer;
         }
 
         .close-img {
             position: absolute;
             z-index: 21;
-            right: 0;
+            right: 10px;
+            top: 10px;
             width: 30px;
             height: 30px;
-            background-color: #464646;
             opacity: 0.5;
             border-radius: 5px;
             scale: 0;
-            transition: ease-in-out 1s;
+            transition: ease-in-out 0.3s;
+            cursor: pointer;
 
         }
     </style>
@@ -114,21 +117,20 @@
             <li class="li-litle">bara</li>
             <li class="li-litle">bara</li>
         </ul>
-        <ul class="ul-2">
+        <ul class="ul-2" id="li-big1">
             <div><img class="close-img" id="close-img1" src="closer-button.png" alt="closer"></div>
             <li class="li-big"><img id="pic1" class="li-picture" src="car.jpg" alt="">
             </li>
             <li class="li-big"><img id="pic2" class="li-picture" src="car2.jpg" alt="">
-                <div><img class="close-img" id="close-img2" src="closer-button.png" alt="closer"></div>
             </li>
             <li class="li-big"><img id="pic3" class="li-picture" src="car.jpg" alt="">
-                <div><img class="close-img" src="closer-button.png" alt="closer"></div>
+                <!-- <div><img class="close-img" src="closer-button.png" alt="closer"></div> -->
             </li>
             <li class="li-big"><img id="pic4" class="li-picture" src="car.jpg" alt="">
-                <div><img class="close-img" src="closer-button.png" alt="closer"></div>
+                <!-- <div><img class="close-img" src="closer-button.png" alt="closer"></div> -->
             </li>
             <li class="li-big"><img id="pic5" class="li-picture" src="car.jpg" alt="">
-                <div><img class="close-img" src="closer-button.png" alt="closer"></div>
+                <!-- <div><img class="close-img" src="closer-button.png" alt="closer"></div> -->
             </li>
         </ul>
 
@@ -146,6 +148,9 @@
 
 
 
+        // ************Big Images Class***************
+        const BIG_IMG = document.getElementsByClassName("li-big");
+
         // ************Slider Images***************
         const PIC1 = document.getElementById("pic1");
         const PIC2 = document.getElementById("pic2");
@@ -154,19 +159,40 @@
         // ************Slider Links****************
         const IMAGE_LINK1 = document.getElementById("link1");
         const IMAGE_LINK2 = document.getElementById("link2");
+        // ************Closer Links****************
+        const CLOSER_LINK = document.getElementById("close-img1");
+
 
 
         const onChangePic = (picture) => {
             PIC1.style.scale = "0";
             PIC2.style.scale = "0";
 
-            if (picture === PIC1) return (PIC1.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
-            if (picture === PIC2) return (PIC2.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
+            const visibilityFn = (Array) => {
+                for (let i = 0; i < Array.length; i++) {
+                    const element = Array[i].style.visibility = "visible";
+                }
+            }
+
+            if (picture === PIC1) return (visibilityFn(BIG_IMG), PIC1.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
+            if (picture === PIC2) return (visibilityFn(BIG_IMG), PIC2.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
 
         };
 
+        const unvisibleFn = (Array) => {
+            for (let i = 0; i < Array.length; i++) {
+                const element = Array[i].style.visibility = "hidden";
+                CLOSER_LINK.style.scale = "0";
+            }
+
+        }
+
         IMAGE_LINK1.addEventListener("click", () => onChangePic(PIC1));
         IMAGE_LINK2.addEventListener("click", () => onChangePic(PIC2));
+
+        CLOSER_LINK.addEventListener("click", () => unvisibleFn(BIG_IMG));
+
+
 
 
 
