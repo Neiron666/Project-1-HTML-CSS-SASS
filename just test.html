@@ -163,7 +163,7 @@
         const IMAGE_LINK5 = document.getElementById("link5");
         const IMAGE_LINK6 = document.getElementById("link6");
         // ************Closer Links****************
-        const CLOSER_LINK = document.getElementById("close-img1");
+        const CLOSER_BTN = document.getElementById("close-img1");
 
 
 
@@ -176,23 +176,23 @@
             PIC6.style.scale = "0";
 
 
-            if (picture === PIC1) return (PIC1.style.visibility = "visible", PIC1.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
-            if (picture === PIC2) return (PIC2.style.visibility = "visible", PIC2.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
-            if (picture === PIC3) return (PIC3.style.visibility = "visible", PIC3.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
-            if (picture === PIC4) return (PIC4.style.visibility = "visible", PIC4.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
-            if (picture === PIC5) return (PIC5.style.visibility = "visible", PIC5.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
-            if (picture === PIC6) return (PIC6.style.visibility = "visible", PIC6.style.scale = "1", document.getElementById("close-img1").style.scale = "1");
+            if (picture === PIC1) return (PIC1.style.visibility = "visible", PIC1.style.scale = "1", CLOSER_BTN.style.scale = "1");
+            if (picture === PIC2) return (PIC2.style.visibility = "visible", PIC2.style.scale = "1", CLOSER_BTN.style.scale = "1");
+            if (picture === PIC3) return (PIC3.style.visibility = "visible", PIC3.style.scale = "1", CLOSER_BTN.style.scale = "1");
+            if (picture === PIC4) return (PIC4.style.visibility = "visible", PIC4.style.scale = "1", CLOSER_BTN.style.scale = "1");
+            if (picture === PIC5) return (PIC5.style.visibility = "visible", PIC5.style.scale = "1", CLOSER_BTN.style.scale = "1");
+            if (picture === PIC6) return (PIC6.style.visibility = "visible", PIC6.style.scale = "1", CLOSER_BTN.style.scale = "1");
         };
 
         const unvisibleFn = () => {
-            CLOSER_LINK.style.scale = "0";
+            CLOSER_BTN.style.scale = "0";
             (PIC1.style.visibility = "hidden", PIC2.style.visibility = "hidden", PIC3.style.visibility = "hidden", PIC4.style.visibility = "hidden", PIC5.style.visibility = "hidden", PIC6.style.visibility = "hidden");
 
         }
         // const unvisibleFn = (Array) => {
         //     for (let i = 0; i < Array.length; i++) {
         //         const element = Array[i].style.visibility = "hidden";
-        //         CLOSER_LINK.style.scale = "0";
+        //         CLOSER_BTN.style.scale = "0";
         //     }
 
         // }
@@ -204,8 +204,8 @@
         IMAGE_LINK5.addEventListener("click", () => onChangePic(PIC5));
         IMAGE_LINK6.addEventListener("click", () => onChangePic(PIC6));
 
-        CLOSER_LINK.addEventListener("click", () => unvisibleFn());
-        // CLOSER_LINK.addEventListener("click", () => unvisibleFn(BIG_IMG));
+        CLOSER_BTN.addEventListener("click", () => unvisibleFn());
+        // CLOSER_BTN.addEventListener("click", () => unvisibleFn(BIG_IMG));
 
 
 
