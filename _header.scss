@@ -12,7 +12,7 @@ header {
   background-position: center;
   background-size: cover;
   /* background-color: $greenColor; */
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 
@@ -22,7 +22,6 @@ header {
   }
 
   .headerLeft {
-    // position: sticky;
     // top: 50px;
     display: flex;
     justify-content: center;

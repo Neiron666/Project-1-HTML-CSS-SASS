@@ -37,7 +37,7 @@ header {
   background-position: center;
   background-size: cover;
   /* background-color: $greenColor; */
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
@@ -234,14 +234,17 @@ header .headerRight:hover ul {
 }
 .main-container h1 {
   background-color: rgba(242, 242, 242, 0.5);
-  width: 30%;
+  width: -moz-fit-content;
+  width: fit-content;
   align-self: center;
+  padding: 0 30px;
 }
 .main-container h1,
 .main-container h2,
 .main-container h3 {
   font-family: "Henny Penny", cursive;
   text-align: center;
+  padding: 0 30px;
 }
 .main-container .link-container {
   width: 200px;
@@ -381,15 +384,35 @@ header .headerRight:hover ul {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .main-container .aboutCarnaval .aboutDiv:nth-child(2n+0) h2 {
-  width: 25%;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: rgba(242, 242, 242, 0.5);
   grid-column: 1/11;
   margin-top: 10px;
   justify-self: center;
 }
+.main-container .aboutCarnaval .aboutDiv:nth-child(2n+0) .mayorNOrleanH2 {
+  background-color: rgba(242, 242, 242, 0.5);
+  grid-column: 1/11;
+  grid-row: 2;
+  margin-top: 10px;
+  justify-self: center;
+}
+.main-container .aboutCarnaval .aboutDiv:nth-child(2n+0) .special-p {
+  grid-column: 1/11;
+  grid-row: 5/6;
+  margin: 20px 20px;
+  text-align: justify;
+}
 .main-container .aboutCarnaval .aboutDiv:nth-child(2n+0) .textAbout {
   grid-column: 2/11;
   grid-row: 2/3;
+  margin: 20px 20px;
+  text-align: justify;
+}
+.main-container .aboutCarnaval .aboutDiv:nth-child(2n+0) .textAbout1 {
+  grid-column: 3/11;
+  grid-row: 3/4;
   margin: 20px 20px;
   text-align: justify;
 }
@@ -625,4 +648,102 @@ footer .fa-twitter {
   transform: scale(1);
   transition: all 0.5s ease-in-out;
   color: #f2f2f2;
+}
+
+.main-container-MediaPage {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 1.5em;
+  background-color: #f2cc0f;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+}
+.main-container-MediaPage .box1 {
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.main-container-MediaPage .box1 .ul-1 {
+  margin: 50px 50px;
+  position: relative;
+  gap: 10px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  list-style-type: none;
+  min-width: 80%;
+  align-self: center;
+}
+.main-container-MediaPage .box1 .ul-1 .li-litle {
+  position: relative;
+  z-index: 20;
+  flex-basis: 350px;
+  height: 200px;
+  background-color: gray;
+  cursor: pointer;
+}
+.main-container-MediaPage .box1 .ul-1 .li-litle:hover {
+  scale: 1.03;
+  transition: ease-in-out 0.3s;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.main-container-MediaPage .box1 .ul-1 #link1 {
+  background-image: url(Pictures/1-about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: sub;
+}
+.main-container-MediaPage .box1 .ul-2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 21;
+  display: flex;
+  width: 50%;
+  aspect-ratio: 16/9;
+  list-style-type: none;
+  justify-content: center;
+}
+.main-container-MediaPage .box1 .ul-2 .li-big {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: last baseline;
+  visibility: hidden;
+}
+.main-container-MediaPage .box1 .ul-2 .li-big .li-picture {
+  border: 3px solid #000;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  scale: 0;
+  transition: ease-in-out 0.3s;
+}
+.main-container-MediaPage .box1 .ul-2 .li-big .li-picture::after {
+  content: "";
+  flex-basis: 350px;
+}
+.main-container-MediaPage .box1 .close-img {
+  position: absolute;
+  z-index: 21;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+  border-radius: 5px;
+  scale: 0;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
