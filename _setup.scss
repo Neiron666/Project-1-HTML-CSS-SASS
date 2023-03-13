@@ -33,3 +33,15 @@ p {
 a {
   text-decoration: none;
 }
+
+%pic-link-gallery {
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: sub;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: $whiteColor;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+}
