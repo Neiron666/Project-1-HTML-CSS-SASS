@@ -45,3 +45,32 @@ a {
   font-size: 1em;
   font-family: "Roboto", sans-serif;
 }
+
+.cursor {
+  cursor: pointer;
+}
+
+main {
+  min-height: 87vh;
+  background-color: $greenColor;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%FAQ-Box {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 1.5em;
+  max-width: 87vw;
+  background-color: $yellowColor;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+}

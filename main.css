@@ -23,7 +23,7 @@ a {
   text-decoration: none;
 }
 
-.main-container-MediaPage .box1 .ul-1 #link6, .main-container-MediaPage .box1 .ul-1 #link5, .main-container-MediaPage .box1 .ul-1 #link4, .main-container-MediaPage .box1 .ul-1 #link3, .main-container-MediaPage .box1 .ul-1 #link2, .main-container-MediaPage .box1 .ul-1 #link1 {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 #link6, .main-container-media .sub-container-MediaPage .box1 .ul-1 #link5, .main-container-media .sub-container-MediaPage .box1 .ul-1 #link4, .main-container-media .sub-container-MediaPage .box1 .ul-1 #link3, .main-container-media .sub-container-MediaPage .box1 .ul-1 #link2, .main-container-media .sub-container-MediaPage .box1 .ul-1 #link1 {
   background-repeat: no-repeat;
   background-size: cover;
   vertical-align: sub;
@@ -35,13 +35,41 @@ a {
   font-family: "Roboto", sans-serif;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
+main {
+  min-height: 87vh;
+  background-color: #8cbf3f;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .FAQ-container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 1.5em;
+  max-width: 87vw;
+  background-color: #f2cc0f;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   position: relative;
   z-index: 2;
   font-family: "Pattaya", sans-serif;
   padding-top: 10px;
   padding-bottom: 10px;
-  position: relative;
   display: flex;
   height: 200px;
   width: 100vw;
@@ -191,56 +219,6 @@ header .headerRight:hover ul {
   align-self: center;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.main-container .container .image-gallery {
-  margin: 20px;
-  padding: 30px 0;
-  border-radius: 5px;
-  align-self: center;
-  max-width: 80%;
-  background-color: rgba(255, 255, 255, 0.502);
-  list-style-type: none;
-  text-decoration: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-.main-container .container .image-gallery > li {
-  flex-basis: 350px;
-  position: relative;
-  cursor: pointer;
-}
-.main-container .container .image-gallery > li:hover img {
-  position: relative;
-  transform: scale(1.05);
-  z-index: 10;
-  transition: all 0.2s 0.1s ease-in-out;
-}
-.main-container .container .image-gallery > li .overlay {
-  position: absolute;
-  z-index: 11;
-  width: 100%;
-  height: 100%;
-  background: rgba(57, 57, 57, 0.502);
-  top: 0;
-  left: 0;
-  transform: scale(0);
-  transition: all 0.2s 0.1s ease-in-out;
-  color: #fff;
-  border-radius: 5px;
-  /* center overlay text */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.main-container .container .image-gallery img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  border-radius: 5px;
-}
 .main-container .image-gallery::after {
   content: "";
   flex-basis: 350px;
@@ -251,6 +229,7 @@ header .headerRight:hover ul {
   width: fit-content;
   align-self: center;
   padding: 0 30px;
+  margin: 30px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .main-container h1,
@@ -297,6 +276,7 @@ header .headerRight:hover ul {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  border: 5px solid #9453a6;
 }
 .main-container .mySlides {
   width: 100%;
@@ -547,6 +527,7 @@ header .headerRight:hover ul {
   justify-content: center;
 }
 .navigate ul li .navButton {
+  position: relative;
   text-decoration: none;
   display: block;
   width: 100%;
@@ -557,6 +538,7 @@ header .headerRight:hover ul {
   width: 100%;
   height: 100%;
   display: block;
+  position: absolute;
   background-color: rgba(242, 242, 242, 0.5);
   /* border: 1px solid #000; */
   transform: translateY(-60px);
@@ -582,6 +564,7 @@ li:hover .navButton p {
 footer {
   background-color: #0d0d0d;
   display: flex;
+  flex-wrap: wrap;
   height: 200px;
   width: 100vw;
   justify-content: space-between;
@@ -594,6 +577,7 @@ footer p {
 }
 footer .social-bar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   width: 30vw;
   height: 50px;
@@ -638,6 +622,7 @@ footer .fa-twitter {
 
 .footer-nav {
   display: flex;
+  flex-wrap: wrap;
   align-content: center;
   width: 25vw;
   transition: all 0.5s ease-in-out;
@@ -665,8 +650,14 @@ footer .fa-twitter {
   color: #f2f2f2;
 }
 
-.main-container-MediaPage {
+.main-container-media {
+  display: flex;
+  background-color: #8cbf3f;
+}
+.main-container-media .sub-container-MediaPage {
   width: 90vw;
+  position: relative;
+  z-index: 0;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -678,7 +669,7 @@ footer .fa-twitter {
   justify-content: center;
   align-items: center;
 }
-.main-container-MediaPage h2 {
+.main-container-media .sub-container-MediaPage h2 {
   width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(242, 242, 242, 0.5);
@@ -688,7 +679,7 @@ footer .fa-twitter {
   margin-bottom: 30px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.main-container-MediaPage h1 {
+.main-container-media .sub-container-MediaPage h1 {
   background-color: rgba(242, 242, 242, 0.5);
   width: -moz-fit-content;
   width: fit-content;
@@ -697,14 +688,15 @@ footer .fa-twitter {
   margin-top: 30px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.main-container-MediaPage h1,
-.main-container-MediaPage h2,
-.main-container-MediaPage h3 {
+.main-container-media .sub-container-MediaPage h1,
+.main-container-media .sub-container-MediaPage h2,
+.main-container-media .sub-container-MediaPage h3 {
   font-family: "Henny Penny", cursive;
   text-align: center;
   padding: 0 30px;
 }
-.main-container-MediaPage .box1 {
+.main-container-media .sub-container-MediaPage .box1 {
+  margin-top: 30px;
   width: 90%;
   flex-direction: column;
   position: relative;
@@ -713,7 +705,7 @@ footer .fa-twitter {
   background-color: #8cbf3f;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.main-container-MediaPage .box1 .ul-1 {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 {
   margin: 50px 50px;
   position: relative;
   gap: 10px;
@@ -724,43 +716,44 @@ footer .fa-twitter {
   min-width: 80%;
   align-self: center;
 }
-.main-container-MediaPage .box1 .ul-1 .li-litle {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 .li-litle {
   position: relative;
   z-index: 20;
   flex-basis: 350px;
   height: 200px;
   background-color: gray;
   cursor: pointer;
+  border: 5px solid #f2cc0f;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.main-container-MediaPage .box1 .ul-1 .li-litle::after {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 .li-litle::after {
   content: "";
   flex-basis: 350px;
 }
-.main-container-MediaPage .box1 .ul-1 .li-litle:hover {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 .li-litle:hover {
   scale: 1.03;
   transition: ease-in-out 0.3s;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.main-container-MediaPage .box1 .ul-1 #link1 {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 #link1 {
   background-image: url(./Pictures/1.jpeg);
 }
-.main-container-MediaPage .box1 .ul-1 #link2 {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 #link2 {
   background-image: url(./Pictures/2.jpeg);
 }
-.main-container-MediaPage .box1 .ul-1 #link3 {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 #link3 {
   background-image: url(./Pictures/3.jpg);
 }
-.main-container-MediaPage .box1 .ul-1 #link4 {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 #link4 {
   background-image: url(./Pictures/4.jpg);
 }
-.main-container-MediaPage .box1 .ul-1 #link5 {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 #link5 {
   background-image: url(./Pictures/5.jpg);
 }
-.main-container-MediaPage .box1 .ul-1 #link6 {
+.main-container-media .sub-container-MediaPage .box1 .ul-1 #link6 {
   background-image: url(./Pictures/mardi-gras-costumes.jpg);
 }
-.main-container-MediaPage .box1 .ul-2 {
+.main-container-media .sub-container-MediaPage .box1 .ul-2 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -771,7 +764,7 @@ footer .fa-twitter {
   list-style-type: none;
   justify-content: center;
 }
-.main-container-MediaPage .box1 .ul-2 .li-big {
+.main-container-media .sub-container-MediaPage .box1 .ul-2 .li-big {
   position: absolute;
   z-index: 20;
   width: 100%;
@@ -780,7 +773,7 @@ footer .fa-twitter {
   justify-content: last baseline;
   visibility: hidden;
 }
-.main-container-MediaPage .box1 .ul-2 .li-big .li-picture {
+.main-container-media .sub-container-MediaPage .box1 .ul-2 .li-big .li-picture {
   border: 5px solid #f2cc0f;
   width: 100%;
   height: 100%;
@@ -791,11 +784,11 @@ footer .fa-twitter {
   transition: ease-in-out 0.3s;
   box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
-.main-container-MediaPage .box1 .ul-2 .li-big .li-picture::after {
+.main-container-media .sub-container-MediaPage .box1 .ul-2 .li-big .li-picture::after {
   content: "";
   flex-basis: 350px;
 }
-.main-container-MediaPage .box1 .close-img {
+.main-container-media .sub-container-MediaPage .box1 .close-img {
   position: absolute;
   z-index: 21;
   right: 10px;
@@ -808,28 +801,96 @@ footer .fa-twitter {
   transition: ease-in-out 0.3s;
   cursor: pointer;
 }
-.main-container-MediaPage .box2 {
+.main-container-media .sub-container-MediaPage .box2 {
+  margin-top: 30px;
   display: flex;
   width: 90%;
-  height: 400px;
+  height: auto;
   flex-flow: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   background-color: #9453a6;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.main-container-MediaPage .box2 .youtube-videos {
-  display: block;
-  min-width: 350px;
-  height: 200px;
+.main-container-media .sub-container-MediaPage .box2 .box3 {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.main-container-media .sub-container-MediaPage .box2 .youtube-videos {
+  display: flex;
+  flex-basis: 300px;
+  height: auto;
   border: 5px solid #f2cc0f;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 50px;
 }
-.main-container-MediaPage .box2 .youtube-videos iframe {
+.main-container-media .sub-container-MediaPage .box2 .youtube-videos iframe {
   display: block;
   width: 100%;
-  height: 100%;
-  aspect-ratio: 16/9;
+  height: auto;
+}
+
+main .FAQ-container {
+  height: 100vh;
+}
+main .FAQ-container h1 {
+  background-color: rgba(242, 242, 242, 0.5);
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+  padding: 0 30px;
+  margin: 30px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  font-family: "Henny Penny", cursive;
+}
+main .FAQ-container .FAQ-sub-container {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  margin-bottom: 40px;
+}
+main .FAQ-container .FAQ-sub-container .main-FAQ-ul {
+  width: 70vw;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+main .FAQ-container .FAQ-sub-container .main-FAQ-ul .main-FAQ-li {
+  line-height: 1.5;
+  font-size: 1.2em;
+  font-weight: 700;
+  width: 100%;
+  border: 1px solid #000;
+  list-style-type: none;
+  background-color: #9453a6;
+  text-align: center;
+  border-collapse: collapse;
+}
+main .FAQ-container .FAQ-sub-container .main-FAQ-ul .main-FAQ-li .sub-FAQ-li {
+  display: none;
+}
+main .FAQ-container .FAQ-sub-container .main-FAQ-ul .main-FAQ-li:hover {
+  background-color: #8cbf3f;
+}
+main .FAQ-container .FAQ-sub-container .main-FAQ-ul .main-FAQ-li .sub-FAQ-li {
+  overflow: auto;
+  max-height: 400px;
+  font-weight: 400;
+  border-top: 1px solid #000;
+  background-color: #f2f2f2;
+  line-height: 1.5;
+  font-size: 0.8em;
+}
+main .FAQ-container .FAQ-sub-container .main-FAQ-ul .main-FAQ-li .sub-FAQ-li p {
+  text-align: center;
+  padding: 20px;
+  cursor: auto;
+  color: #f2f2f2;
+  background-color: #0d0d0d;
 }/*# sourceMappingURL=main.css.map */
