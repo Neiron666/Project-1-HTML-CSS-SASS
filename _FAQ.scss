@@ -1,6 +1,5 @@
 main {
   .FAQ-container {
-    height: 100vh;
     h1 {
       background-color: rgba($whiteColor, 0.5);
       width: fit-content;
@@ -12,7 +11,7 @@ main {
     }
     @extend %FAQ-Box;
     .FAQ-sub-container {
-      height: fit-content;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -40,6 +39,7 @@ main {
           .sub-FAQ-li {
             overflow: auto;
             // display: block;
+
             max-height: 400px;
             font-weight: 400;
             border-top: 1px solid #000;

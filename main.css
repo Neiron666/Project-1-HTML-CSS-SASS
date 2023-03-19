@@ -198,13 +198,12 @@ header .headerRight:hover ul {
   align-items: center;
 }
 .main-container .container {
-  width: 100vw;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   font-size: 1.5em;
-  max-width: 87vw;
+  width: 87vw;
   background-color: #f2cc0f;
   font-family: "Roboto", sans-serif;
   text-align: justify;
@@ -655,7 +654,7 @@ footer .fa-twitter {
   background-color: #8cbf3f;
 }
 .main-container-media .sub-container-MediaPage {
-  width: 90vw;
+  width: 87vw;
   position: relative;
   z-index: 0;
   margin: 0 auto;
@@ -835,9 +834,6 @@ footer .fa-twitter {
   height: auto;
 }
 
-main .FAQ-container {
-  height: 100vh;
-}
 main .FAQ-container h1 {
   background-color: rgba(242, 242, 242, 0.5);
   width: -moz-fit-content;
@@ -849,8 +845,7 @@ main .FAQ-container h1 {
   font-family: "Henny Penny", cursive;
 }
 main .FAQ-container .FAQ-sub-container {
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
