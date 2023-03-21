@@ -197,7 +197,7 @@ header .headerRight:hover ul {
   flex-direction: column;
   align-items: center;
 }
-.main-container .container {
+.main-container .container, .main-container .contact-container {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -210,7 +210,7 @@ header .headerRight:hover ul {
   justify-content: center;
   align-items: center;
 }
-.main-container .container h2 {
+.main-container .container h2, .main-container .contact-container h2 {
   width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(242, 242, 242, 0.5);
@@ -888,4 +888,46 @@ main .FAQ-container .FAQ-sub-container .main-FAQ-ul .main-FAQ-li .sub-FAQ-li p {
   cursor: auto;
   color: #f2f2f2;
   background-color: #0d0d0d;
+}
+
+.main-container .contact-container {
+  height: 100vh;
+}
+.main-container .contact-container .form-div {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  font-family: "Roboto", sans-serif;
+  align-items: center;
+}
+.main-container .contact-container .form-div form {
+  margin: 50px 20px;
+  text-align: left;
+}
+.main-container .contact-container .form-div form fieldset {
+  padding: 5px 10px;
+  border: 5px solid #9453a6;
+  border-radius: 4px;
+}
+.main-container .contact-container .form-div input, .main-container .contact-container .form-div textarea {
+  width: 100%;
+  margin: 8px 0;
+  border: 1px solid #9453a6;
+  border-radius: 4px;
+  line-height: 1;
+  padding: 12px 20px;
+  font-size: 1em;
+}
+.main-container .contact-container .form-div textarea {
+  resize: none;
+}
+.main-container .contact-container .form-div .submit-btn {
+  background-color: #9453a6;
+  color: #0d0d0d;
+  transition: all 0.3s ease-in-out;
+}
+.main-container .contact-container .form-div .submit-btn:hover {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

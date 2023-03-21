@@ -1,0 +1,46 @@
+.main-container {
+  .contact-container {
+    @extend .container;
+    height: 100vh;
+    .form-div {
+      display: flex;
+      flex-direction: column;
+      width: inherit;
+      font-family: "Roboto", sans-serif;
+      align-items: center;
+      form {
+        margin: 50px 20px;
+        text-align: left;
+        fieldset {
+          padding: 5px 10px;
+          border: 5px solid $pincColor;
+          border-radius: 4px;
+        }
+      }
+      input {
+        width: 100%;
+        // display: inline-block;
+        margin: 8px 0;
+        border: 1px solid $pincColor;
+        border-radius: 4px;
+        line-height: 1;
+        padding: 12px 20px;
+        font-size: 1em;
+      }
+      textarea {
+        @extend input;
+        resize: none;
+      }
+      .submit-btn {
+        background-color: $pincColor;
+        color: $blackColor;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: $blackColor;
+          color: $whiteColor;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
