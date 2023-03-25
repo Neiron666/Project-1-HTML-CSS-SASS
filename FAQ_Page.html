@@ -11,6 +11,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
         </script> -->
     <script defer src="./script/FAQ_page.js"></script>
+    <script defer src="./script/Nav_bar.js"></script>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- font-family: 'Roboto', sans-serif; -->
@@ -20,6 +21,7 @@
     <link rel="shortcut icon" href="Pictures/favIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -30,21 +32,22 @@
         <!-- NAV BAR -->
     </header>
     <nav class="navigate">
-        <ul>
+        <div class="i-box"><i id="i-box" onclick="navBar()" class="fa fa-bars cursor"></i></div>
+        <ul id="nav-ul">
             <li><a href="./MainPage.html" class="navButton">
-                    <p> Home</p><span></span>
+                    Home<span></span>
                 </a></li>
             <li><a href="./About-page.html" class="navButton">
-                    <p> About</p><span></span>
+                    About<span></span>
                 </a></li>
             <li><a href="./Media-page.html" class="navButton">
-                    <p>Media</p><span></span>
+                    Media<span></span>
                 </a></li>
             <li><a href="./FAQ_Page.html" class="navButton">
-                    <p>FAQ</p><span></span>
+                    FAQ<span></span>
                 </a></li>
             <li><a href="./contact-page.html" class="navButton">
-                    <p>Contact</p><span></span>
+                    Contact<span></span>
                 </a></li>
         </ul>
     </nav>

@@ -3,6 +3,7 @@ $whiteColor: #f2f2f2;
 $yellowColor: #f2cc0f;
 $greenColor: #8cbf3f;
 $pincColor: #9453a6;
+$medSize: 800px;
 
 * {
   padding: 0;
@@ -73,4 +74,10 @@ main {
   text-align: justify;
   justify-content: center;
   align-items: center;
+}
+
+@mixin nav_tablet_view() {
+  @media (max-width: $medSize) {
+    @content;
+  }
 }

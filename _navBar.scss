@@ -4,20 +4,20 @@
   align-content: center;
   background-color: $yellowColor;
   font-family: "Pattaya", sans-serif;
-  width: 100vw;
   font-size: 2em;
   line-height: 2;
   max-height: 60px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-
+  .i-box {
+    display: none;
+  }
   ul {
     list-style-type: none;
     background-color: $pincColor;
-    width: 80vw;
+    width: 87vw;
     height: 60px;
     display: flex;
     justify-content: space-evenly;
-
     li:nth-child(even) {
       background-color: $yellowColor;
     }
@@ -34,6 +34,7 @@
 
       .navButton {
         position: relative;
+        z-index: 1;
         text-decoration: none;
         display: block;
         width: 100%;

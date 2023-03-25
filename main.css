@@ -72,7 +72,7 @@ header {
   padding-bottom: 10px;
   display: flex;
   height: 200px;
-  width: 100vw;
+  width: auto;
   background-image: url(Pictures/Background-2.png);
   background-position: center;
   background-size: cover;
@@ -196,8 +196,10 @@ header .headerRight:hover ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
-.main-container .container, .main-container .contact-container {
+.main-container .container, .main-container .main-container {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -210,7 +212,7 @@ header .headerRight:hover ul {
   justify-content: center;
   align-items: center;
 }
-.main-container .container h2, .main-container .contact-container h2 {
+.main-container .container h2, .main-container .main-container h2 {
   width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(242, 242, 242, 0.5);
@@ -224,11 +226,7 @@ header .headerRight:hover ul {
 }
 .main-container h1 {
   background-color: rgba(242, 242, 242, 0.5);
-  width: -moz-fit-content;
-  width: fit-content;
   align-self: center;
-  padding: 0 30px;
-  margin: 30px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .main-container h1,
@@ -294,11 +292,15 @@ header .headerRight:hover ul {
   text-align: center;
 }
 .main-container .aboutCarnaval {
+  width: 87vw;
   margin-top: 20px;
   padding-bottom: 40px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  flex-flow: column wrap;
+  flex-wrap: column wrap;
+  padding: 80px;
 }
 .main-container .aboutCarnaval .aboutDiv {
   text-align: center;
@@ -306,9 +308,9 @@ header .headerRight:hover ul {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 1fr, 8fr;
-  margin: 20px 80px;
   background-color: #8cbf3f;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  margin: 20px;
 }
 .main-container .aboutCarnaval .aboutDiv h2 {
   width: -moz-fit-content;
@@ -373,7 +375,6 @@ header .headerRight:hover ul {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 1fr, 8fr;
-  margin: 20px 80px;
   background-color: #9453a6;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -434,7 +435,8 @@ header .headerRight:hover ul {
 }
 .main-container .main-sponsors-box h2 {
   background-color: rgba(242, 242, 242, 0.5);
-  width: 20%;
+  width: -moz-fit-content;
+  width: fit-content;
   align-self: center;
 }
 .main-container .main-sponsors-box .sponsors {
@@ -500,16 +502,18 @@ header .headerRight:hover ul {
   align-content: center;
   background-color: #f2cc0f;
   font-family: "Pattaya", sans-serif;
-  width: 100vw;
   font-size: 2em;
   line-height: 2;
   max-height: 60px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
+.navigate .i-box {
+  display: none;
+}
 .navigate ul {
   list-style-type: none;
   background-color: #9453a6;
-  width: 80vw;
+  width: 87vw;
   height: 60px;
   display: flex;
   justify-content: space-evenly;
@@ -527,6 +531,7 @@ header .headerRight:hover ul {
 }
 .navigate ul li .navButton {
   position: relative;
+  z-index: 1;
   text-decoration: none;
   display: block;
   width: 100%;
@@ -569,6 +574,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   color: #f2f2f2;
 }
 footer p {
@@ -578,7 +584,7 @@ footer .social-bar {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 30vw;
+  width: 50vw;
   height: 50px;
   justify-self: flex-start;
   transform: translateY(-30px);
@@ -621,9 +627,8 @@ footer .fa-twitter {
 
 .footer-nav {
   display: flex;
-  flex-wrap: wrap;
   align-content: center;
-  width: 25vw;
+  width: 50vw;
   transition: all 0.5s ease-in-out;
 }
 .footer-nav p {
@@ -642,6 +647,7 @@ footer .fa-twitter {
 }
 .footer-nav ul li a {
   color: #9453a6;
+  margin: 5px;
 }
 .footer-nav ul li:hover a p {
   transform: scale(1);
@@ -758,7 +764,7 @@ footer .fa-twitter {
   transform: translateX(-50%);
   z-index: 21;
   display: flex;
-  width: 50%;
+  width: 100%;
   aspect-ratio: 16/9;
   list-style-type: none;
   justify-content: center;
@@ -834,6 +840,68 @@ footer .fa-twitter {
   height: auto;
 }
 
+@media (max-width: 800px) {
+  .navigate {
+    position: relative;
+    background-color: #0d0d0d;
+  }
+  .navigate .i-box {
+    display: flex;
+    max-width: 87vw;
+    font-size: 2em;
+    justify-content: flex-end;
+  }
+  .navigate .i-box .fa-bars {
+    color: #f2f2f2;
+    display: inline-block;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .navigate #nav-ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+  }
+  .navigate #nav-ul li a {
+    background-color: #0d0d0d;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-container .container .aboutCarnaval, .main-container .main-container .aboutCarnaval {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-container .container .aboutCarnaval .aboutDiv, .main-container .main-container .aboutCarnaval .aboutDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-container .container .aboutCarnaval .aboutDiv .aboutImgs, .main-container .main-container .aboutCarnaval .aboutDiv .aboutImgs {
+    order: -1;
+  }
+  .main-container .container .aboutCarnaval .aboutDiv .textAbout, .main-container .main-container .aboutCarnaval .aboutDiv .textAbout {
+    grid-column: 1/11;
+    grid-row: 2/3;
+    margin: 20px 20px;
+    text-align: justify;
+  }
+  .main-container .container .aboutCarnaval .aboutDiv .aboutImgs, .main-container .main-container .aboutCarnaval .aboutDiv .aboutImgs {
+    order: -1;
+    grid-row: 2/3;
+    grid-column: 1/11;
+    padding: 5px;
+    background-color: #f2cc0f;
+    margin: 20px;
+    width: 200px;
+    max-height: 150px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    justify-self: center;
+  }
+}
+
 main .FAQ-container h1 {
   background-color: rgba(242, 242, 242, 0.5);
   width: -moz-fit-content;
@@ -892,6 +960,11 @@ main .FAQ-container .FAQ-sub-container .main-FAQ-ul .main-FAQ-li .sub-FAQ-li p {
 
 .main-container .contact-container {
   height: 100vh;
+  width: 87vw;
+  background-color: #f2cc0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .main-container .contact-container .form-div {
   display: flex;
@@ -903,6 +976,7 @@ main .FAQ-container .FAQ-sub-container .main-FAQ-ul .main-FAQ-li .sub-FAQ-li p {
 .main-container .contact-container .form-div form {
   margin: 50px 20px;
   text-align: left;
+  width: 80%;
 }
 .main-container .contact-container .form-div form fieldset {
   padding: 20px 20px;
@@ -934,4 +1008,7 @@ main .FAQ-container .FAQ-sub-container .main-FAQ-ul .main-FAQ-li .sub-FAQ-li p {
   background-color: #0d0d0d;
   color: #f2f2f2;
   cursor: pointer;
+}
+.main-container .span-color {
+  color: red;
 }/*# sourceMappingURL=main.css.map */
