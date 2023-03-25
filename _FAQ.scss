@@ -1,8 +1,8 @@
 main {
   .FAQ-container {
+    height: fit-content;
     h1 {
       background-color: rgba($whiteColor, 0.5);
-      width: fit-content;
       align-self: center;
       padding: 0 30px;
       margin: 30px;
@@ -38,9 +38,7 @@ main {
           }
           .sub-FAQ-li {
             overflow: auto;
-            // display: block;
-
-            max-height: 400px;
+            max-height: 200px;
             font-weight: 400;
             border-top: 1px solid #000;
             background-color: $whiteColor;

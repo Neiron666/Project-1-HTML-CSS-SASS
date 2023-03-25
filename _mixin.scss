@@ -25,9 +25,31 @@
     }
   }
 }
-
+.FAQ-container {
+  @include nav_tablet_view() {
+    h1 {
+      font-size: 1.5em;
+      line-height: 1.3;
+      padding: 5px;
+    }
+  }
+}
+.main-container-media {
+  @include nav_tablet_view() {
+    h1 {
+      font-size: 1.5em;
+      line-height: 1.3;
+      padding: 5px;
+    }
+  }
+}
 .main-container {
   @include nav_tablet_view() {
+    h1 {
+      font-size: 1.5em;
+      line-height: 1.3;
+      padding: 5px;
+    }
     .container {
       .aboutCarnaval {
         display: flex;
