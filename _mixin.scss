@@ -2,6 +2,9 @@
   @include nav_tablet_view() {
     position: relative;
     background-color: $blackColor;
+    &:hover {
+      background-color: rgba($color: $blackColor, $alpha: 0.9);
+    }
     .i-box {
       display: flex;
       max-width: 87vw;

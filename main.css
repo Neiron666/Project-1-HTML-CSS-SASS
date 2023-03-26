@@ -839,6 +839,9 @@ footer .fa-twitter {
     position: relative;
     background-color: #0d0d0d;
   }
+  .navigate:hover {
+    background-color: rgba(13, 13, 13, 0.9);
+  }
   .navigate .i-box {
     display: flex;
     max-width: 87vw;
