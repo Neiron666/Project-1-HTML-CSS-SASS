@@ -106,13 +106,17 @@
         }
       }
       .ul-2 {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        position: fixed;
+        width: 80vw;
+        max-height: 90vh;
+        // left: 50%;
+        top: 50%;
+        // transform: translateX(-50%);
+        transform: translateY(-50%);
         z-index: 21;
         display: flex;
         // flex-basis: 400px;
-        width: 100%;
+        // width: 100%;
         aspect-ratio: 16/9;
         list-style-type: none;
         justify-content: center;

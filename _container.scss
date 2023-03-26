@@ -5,7 +5,7 @@
   justify-content: center;
   // width: 100vw;
   .container {
-    margin: 0 auto;
+    margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -64,7 +64,7 @@
     }
   }
   .slideshow-container {
-    width: 87vw;
+    width: 100vw;
     // height: 400px;
     font-weight: 600;
     font-family: "Roboto", sans-serif;
@@ -90,7 +90,7 @@
   .mySlides {
     width: 100%;
     height: auto;
-    background-color: $blackColor;
+    // background-color: $blackColor;
   }
   .fade2,
   .fade3,
@@ -115,6 +115,7 @@
     flex-direction: column;
     flex-wrap: column wrap;
     padding: 80px;
+    gap: 40px;
 
     .aboutDiv {
       text-align: center;
@@ -124,7 +125,7 @@
       grid-template-rows: 1fr, 8fr;
       background-color: $greenColor;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      margin: 20px;
+      // margin: 20px;
       h2 {
         width: fit-content;
         background-color: rgba($whiteColor, 0.5);
