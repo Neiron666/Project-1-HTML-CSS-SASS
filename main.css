@@ -89,25 +89,30 @@ header a:hover img {
 header .headerLeft {
   display: flex;
   justify-content: center;
-  width: 25vw;
-  height: 100px;
-  background-color: #8cbf3f;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: fixed;
+  left: 10px;
+  top: 50vh;
+  transform: translateY(-50%);
+  height: 25vh;
+  opacity: 0.3;
+  background-color: #f2cc0f;
+  padding: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  transform: scaleY(0.2);
   transition: all 0.5s ease-in-out;
 }
 header .headerLeft:hover {
-  transform: scale(1);
+  opacity: 1;
   transition: all 0.5s ease-in-out;
-  background-color: #0d0d0d;
 }
 header .headerLeft ul {
   width: 100%;
   display: flex;
+  flex-direction: column;
   list-style-type: none;
   justify-content: space-evenly;
   align-items: center;
-  visibility: hidden;
 }
 header .headerLeft ul li:nth-child(odd) {
   background-color: #8cbf3f;
@@ -120,8 +125,9 @@ header .headerLeft ul li:nth-child(even) {
 header .headerLeft ul a {
   display: flex;
   text-decoration: none;
-  line-height: 2.5;
-  font-size: 1.2em;
+  padding: 0 5px;
+  line-height: 4;
+  font-size: 0.8em;
   justify-content: center;
   color: #f2f2f2;
 }
@@ -134,17 +140,19 @@ header .headerLeft:hover ul {
 header .headerRight {
   display: flex;
   justify-content: center;
-  width: 25vw;
-  height: 100px;
-  background-color: #8cbf3f;
+  background-color: #f2f2f2;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  transform: scaleY(0.2);
   transition: all 0.5s ease-in-out;
+  position: fixed;
+  right: 5vw;
+  bottom: 5vh;
+  border-radius: 50%;
+  opacity: 0.5;
 }
 header .headerRight:hover {
-  transform: scale(1);
+  opacity: 1;
   transition: all 0.5s ease-in-out;
-  background-color: #0d0d0d;
+  background-color: #f2f2f2;
 }
 header .headerRight ul {
   width: 100%;
@@ -152,29 +160,15 @@ header .headerRight ul {
   list-style-type: none;
   justify-content: space-evenly;
   align-items: center;
-  visibility: hidden;
-}
-header .headerRight ul li:nth-child(odd) {
-  background-color: #8cbf3f;
-  width: 100%;
-}
-header .headerRight ul li:nth-child(even) {
-  background-color: #9453a6;
-  width: 100%;
+  padding: 5px;
 }
 header .headerRight ul a {
   display: flex;
   text-decoration: none;
-  line-height: 2.5;
-  font-size: 1.2em;
   justify-content: center;
   color: #f2f2f2;
-}
-header .headerRight ul a:hover {
-  background-color: #0d0d0d;
-}
-header .headerRight:hover ul {
-  visibility: visible;
+  width: 50px;
+  height: 50px;
 }
 
 /*     .headerLeft:hover ul{
@@ -920,6 +914,27 @@ footer .fa-twitter {
     max-height: 150px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     justify-self: center;
+  }
+}
+
+@media (max-width: 800px) {
+  footer {
+    height: 120px;
+    flex-wrap: nowrap;
+  }
+  footer .social-bar {
+    flex-wrap: nowrap;
+  }
+  footer .social-bar .fa {
+    scale: 0.7;
+  }
+  footer a {
+    margin-bottom: 10px;
+    font-size: 0.6em;
+  }
+  footer p {
+    margin-bottom: 10px;
+    font-size: 0.6em;
   }
 }
 

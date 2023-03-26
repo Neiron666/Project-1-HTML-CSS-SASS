@@ -86,3 +86,23 @@
     }
   }
 }
+footer {
+  @include nav_tablet_view() {
+    height: 120px;
+    flex-wrap: nowrap;
+    .social-bar {
+      flex-wrap: nowrap;
+      .fa {
+        scale: 0.7;
+      }
+    }
+    a {
+      margin-bottom: 10px;
+      font-size: 0.6em;
+    }
+    p {
+      margin-bottom: 10px;
+      font-size: 0.6em;
+    }
+  }
+}
