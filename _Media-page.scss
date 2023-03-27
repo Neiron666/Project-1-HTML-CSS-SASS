@@ -172,6 +172,7 @@
       background-color: $pincColor;
       box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
       .box3 {
+        position: relative;
         display: flex;
         flex-direction: row;
         flex-flow: wrap;

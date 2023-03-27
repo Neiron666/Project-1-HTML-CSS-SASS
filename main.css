@@ -814,6 +814,7 @@ footer .fa-twitter {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .main-container-media .sub-container-MediaPage .box2 .box3 {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
