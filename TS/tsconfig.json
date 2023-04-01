@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // will compilate typescript code to newest version of JS
+    "module": "ESNext", // The newest version of modules Ecma Script of JS, "Export - import - export default"
+    "rootDir": "./ts", // The main direction of source tipe script file
+    "outDir": "./src", // The main direction of out js file
+    "removeComments": true, // Will remove all comments while compilate to app.JS file
+    "strict": true, // Strict mode = (see youtube about strict mode)
+    "forceConsistentCasingInFileNames": true, // defend export defoult from error name import
+    "noUnusedLocals": true, //will send us when we dont use some annonced varible
+    "noImplicitThis": true, // check if THIS is undefined
+    "noUnusedParameters": true, // check parameters that was non used
+    "noImplicitReturns": true, //
+    "esModuleInterop": true,
+    "skipLibCheck": true, //
+    "lib": ["DOM", "esnext"] // Know alla elements in DOM
+  }
+}

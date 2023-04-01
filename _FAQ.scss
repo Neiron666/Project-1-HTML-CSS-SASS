@@ -1,6 +1,5 @@
 main {
   .FAQ-container {
-    height: fit-content;
     h1 {
       background-color: rgba($whiteColor, 0.5);
       align-self: center;
@@ -11,7 +10,7 @@ main {
     }
     @extend %FAQ-Box;
     .FAQ-sub-container {
-      height: 100vh;
+      height: fit-content;
       display: flex;
       flex-direction: column;
       align-items: center;

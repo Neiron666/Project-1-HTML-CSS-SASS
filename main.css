@@ -652,8 +652,13 @@ footer .fa-twitter {
   display: flex;
   background-color: #8cbf3f;
 }
+.main-container-media .FAQ-container {
+  height: inherit;
+}
 .main-container-media .sub-container-MediaPage {
   width: 87vw;
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
   z-index: 0;
   margin: 0 auto;
@@ -765,7 +770,7 @@ footer .fa-twitter {
 }
 .main-container-media .sub-container-MediaPage .box1 .ul-2 .li-big {
   position: absolute;
-  z-index: 20;
+  z-index: -2;
   width: 100%;
   height: 100%;
   display: flex;
@@ -967,10 +972,6 @@ footer .fa-twitter {
   }
 }
 
-main .FAQ-container {
-  height: -moz-fit-content;
-  height: fit-content;
-}
 main .FAQ-container h1 {
   background-color: rgba(242, 242, 242, 0.5);
   align-self: center;
@@ -980,7 +981,8 @@ main .FAQ-container h1 {
   font-family: "Henny Penny", cursive;
 }
 main .FAQ-container .FAQ-sub-container {
-  height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
