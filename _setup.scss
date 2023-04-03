@@ -82,3 +82,17 @@ main {
     @content;
   }
 }
+
+.button {
+  border: 1px solid #000;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  font-weight: 800;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  background-color: $blackColor;
+  color: $whiteColor;
+  text-align: center;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}

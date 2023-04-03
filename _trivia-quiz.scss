@@ -1,0 +1,50 @@
+.main_trivia {
+  @extend %FAQ-Box;
+  min-height: 100vh;
+  width: 87vw;
+  gap: 50px;
+  h2 {
+    width: fit-content;
+    background-color: rgba($whiteColor, 0.5);
+    justify-self: center;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  .trivia_answers {
+    display: flex;
+    background-color: $whiteColor;
+    padding: 20px;
+    border-radius: 20px;
+    width: 40vw;
+    height: auto;
+    .trivia_answer_li {
+      font-weight: 300;
+      background-color: #fff;
+      margin: 20px;
+      border-radius: 20px;
+      padding: 10px;
+      &:hover {
+        background-color: #d0cfcf;
+      }
+    }
+  }
+  .trivia_button {
+    width: 40vw;
+    text-decoration: none;
+    color: $whiteColor;
+    font-size: 1em;
+    &:hover {
+      background-color: #3b3b3b;
+      border: 1px solid #000;
+    }
+    &:active {
+      text-decoration: none;
+      color: none;
+      &:visited {
+        text-decoration: none;
+      }
+    }
+  }
+}
